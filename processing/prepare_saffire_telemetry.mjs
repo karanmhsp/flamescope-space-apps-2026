@@ -207,6 +207,25 @@ for (const { name: sheetName, timeHeader, timestampHeader, output: outputName } 
   ]);
   await writeFile(path.join(curated, outputName), [outputHeaders, ...outputRows].map((row) => row.map(csv).join(",")).join("\n") + "\n", "utf8");
 
+  if (sheetName === "CygnusData") {
+    const dashboardColumns = [
+      "psi_record_id", "doi", "record_version", "source_file", "source_sheet", "source_row",
+      "CygnusTimestamp", "Relative Time (s)",
+      "FIZ1 Smoke Detector Obscuration  (V)", "FIZ 2 Smoke Detector Obscuration (V)",
+      "FIZ 1 Smoke Detector Scatterometer (V)", "FIZ 2 Smoke Detector Scatterometer (V)",
+      "PCM Air Temp (degC)", "PCM Press (psi)",
+      "FIZ 1 Cabin Fan delta P (Pa)", "FIZ 2 Cabin Fan Delta P (Pa)", "quality_flags",
+    ];
+    const indices = dashboardColumns.map((column) => outputHeaders.indexOf(column));
+    if (indices.some((index) => index < 0)) throw new Error("The SAFFIRE dashboard export is missing an expected source channel.");
+    const dashboardRows = outputRows.map((row) => indices.map((index) => row[index]));
+    await writeFile(
+      path.join(curated, "saffire_cygnus_dashboard.csv"),
+      [dashboardColumns, ...dashboardRows].map((row) => row.map(csv).join(",")).join("\n") + "\n",
+      "utf8",
+    );
+  }
+
   const timeSummary = describeTime(cleanedRows.map((row) => row.values), timeIndex, timeHeader);
   report.sheets.push({
     name: sheetName,
