@@ -143,6 +143,23 @@ function App() {
           <a href={experiment.href} target="_blank" rel="noreferrer">NASA PSI record <ArrowUpRight size={14} /></a>
         </section>
 
+        <section className="process-rail" aria-label="Telemetry processing path">
+          <div className="process-heading"><span className="section-kicker">DATA PATH</span><strong>From PSI record to signal review</strong></div>
+          <div className="process-steps">
+            {[
+              { number: '01', title: 'Source', detail: `${experiment.record} · v${experiment.recordVersion}` },
+              { number: '02', title: 'Curate', detail: 'Preserve source rows, units & time' },
+              { number: '03', title: 'Quality', detail: 'Audit timestamps & missing values' },
+              { number: '04', title: 'Screen', detail: 'Rolling median/MAD · exploratory' },
+            ].map((step) => (
+              <div className="process-step" key={step.number}>
+                <span className="process-number">{step.number}</span>
+                <div><strong>{step.title}</strong><small>{step.detail}</small></div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className="metric-grid" aria-label="Selected stream summary">
           <Metric icon={<Activity size={17} />} label="VALID SAMPLES" value={stream.quality.cleaned_row_count.toLocaleString()} detail={`${points.length.toLocaleString()} numeric in selected channel`} />
           <Metric icon={<Gauge size={17} />} label="MEDIAN CADENCE" value={formatCadence(cadence)} detail="From source timestamps" />
