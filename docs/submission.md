@@ -1,6 +1,6 @@
 # FlameScope — submission brief
 
-##project summary
+## project summary
 
 Fire in microgravity is a spacecraft safety problem, but the evidence is scattered across experiment files and instruments. FlameScope turns NASA’s SAFFIRE-I (PSI-98) and FLEX (PSI-69) records into an interactive, source-linked dashboard. Switch from spacecraft smoke, temperature, pressure, and flow channels to FLEX droplet and camera measurements; every chart keeps its own clock, source units, run context, and quality notes. A transparent rolling median/MAD screen highlights unusual single-channel samples for human review and traces each point to its source row. We preserve measured peaks, document rows excluded for unusable timestamps, and never merge unmatched streams. This prototype does not claim to predict a fire or issue an operational alarm. It shows what these data support today—and what additional runs, calibration, and validation are needed before a fire-safety model can be trusted for Moon or Mars missions.
 
