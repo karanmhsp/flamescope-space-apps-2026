@@ -1,0 +1,61 @@
+{
+  "project": "FlameScope",
+  "manifest_version": 1,
+  "sources": [
+    {
+      "investigation_id": "SAFFIRE-I",
+      "title": "Spacecraft Fire Safety Experiment-I (SAFFIRE-I)",
+      "psi_record_id": "PSI-98",
+      "record_version_reviewed": 4,
+      "record_updated": "2025-06-03",
+      "doi": "10.60555/0t15-1z43",
+      "record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+      "doi_url": "https://doi.org/10.60555/0t15-1z43",
+      "license": "CC0-1.0",
+      "research_area": "Combustion Science",
+      "subresearch_area": "Spacecraft Fire, Smoke Distribution",
+      "focus": "Large solid-fabric fire behavior and fire detection measurements in a spacecraft duct",
+      "reported_context": {
+        "material": "Sibal composite fabric (75% cotton, 25% fiberglass by weight)",
+        "sample_size_m": [0.94, 0.4],
+        "duct_airflow_cm_per_s": 20,
+        "measurements_reported": [
+          "video",
+          "thermocouple temperature",
+          "radiometer signal",
+          "oxygen and carbon-dioxide mole fractions",
+          "pressure",
+          "airflow velocity"
+        ]
+      },
+      "download_status": "not_started"
+    },
+    {
+      "investigation_id": "FLEX",
+      "title": "Flame Extinguishment Experiment (FLEX)",
+      "psi_record_id": "PSI-69",
+      "record_version_reviewed": 5,
+      "record_updated": "2025-06-06",
+      "doi": "10.60555/mbq8-0451",
+      "record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+      "doi_url": "https://doi.org/10.60555/mbq8-0451",
+      "license": "CC0-1.0",
+      "research_area": "Combustion Science",
+      "subresearch_area": "Spacecraft Fire Safety",
+      "focus": "Droplet combustion, flammability limits, and extinction under microgravity conditions",
+      "reported_context": {
+        "pressure_range_atm": [0.5, 1.5],
+        "initial_droplet_diameter_approx_mm": 3,
+        "suppressants_reported": ["CO2", "He", "SF6"],
+        "measurements_reported": [
+          "droplet burning rate",
+          "flame extinction behavior",
+          "heat radiation",
+          "soot level",
+          "temperature profile"
+        ]
+      },
+      "download_status": "not_started"
+    }
+  ]
+}
