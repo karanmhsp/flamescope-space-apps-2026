@@ -68,13 +68,13 @@ The development server prints the local preview URL. To build production assets,
 
 ## Submission readiness
 
-### Ready in the repository
+### Public materials prepared
 
-- Source code, lockfile, processing instructions, data provenance, model limits, copy-ready summary, source references, and the MIT license are included.
-- The production build passed with the committed curated data. The raw NASA downloads remain uncommitted.
+- The GitHub repository is public: <https://github.com/karanmhsp/flamescope-space-apps-2026>.
+- The seven-slide project demo is in [`../submission/flamescope-demo.pptx`](../submission/flamescope-demo.pptx). The same folder contains paste-ready project title, summary, detailed description, NASA references, and AI-use disclosure.
+- Source code, lockfile, processing instructions, data provenance, model limits, and the MIT license are included. Raw NASA downloads remain uncommitted.
+- The production build passed with the committed curated data. The dashboard is not hosted as a public live site; the project link points to the public code repository and the demo link points to the slide deck.
 
-### Confirm before submitting
+### Official project page
 
-- The authenticated Git remote accepts pushes, but an unauthenticated public-page check currently returns 404. The repository may be private or otherwise unavailable publicly. Confirm public access and test the link in a signed-out browser before giving it to judges.
-- The dashboard currently runs locally; no public demo host has been configured. If the official submission form asks for a demo URL, deploy the app or provide a publicly accessible demo video/slide link and verify access without login.
-- Complete and submit the official NASA Space Apps project page, select this challenge, add the summary and references, disclose tool assistance as requested, and confirm the submission status. The [2026 overview](https://www.spaceappschallenge.org/2026/) says submissions close November 15 at 11:59 p.m. local time; follow the deadline displayed for the registered Universal Event/team lead.
+The team page is `Karan.mhsp`, Universal Event, for **Flame in Freefall**. The official NASA Space Apps project page still needs to be completed from the team’s Project tab. Use [`../submission/entry-copy.md`](../submission/entry-copy.md) for the prepared fields, verify the account’s team membership and solo-team setting, and check the final submission status after saving. The [2026 overview](https://www.spaceappschallenge.org/2026/) lists the project deadline as November 15 at 11:59 p.m. local time; follow the deadline displayed for the registered Universal Event team lead.

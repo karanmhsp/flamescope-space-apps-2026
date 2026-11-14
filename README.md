@@ -11,7 +11,7 @@ FlameScope is a working, evidence-first dashboard prototype for NASA's **Flame i
 - Each view plots preserved time series, source-linked sample counts, observed ranges, and candidate departures from a rolling median/MAD screen. The screen is exploratory; it is not a trained classifier or operational fire alarm.
 - Independent clocks, units, missingness, source rows, and run context remain visible. Cross-stream timing is not reconciled and the investigations are never merged.
 
-The current screen is a rolling median/MAD research heuristic, not a trained AI model, predictive fire warning, or certified safety system. See [`docs/submission.md`](docs/submission.md) for the copy-ready project summary, data attributions, evidence limits, and remaining submission steps. Detailed source and model notes are in [`docs/data-retrieval.md`](docs/data-retrieval.md), [`docs/data-schema.md`](docs/data-schema.md), and [`docs/phase-two-model-architecture.md`](docs/phase-two-model-architecture.md).
+The current screen is a rolling median/MAD research heuristic, not a trained AI model, predictive fire warning, or certified safety system. See [`docs/submission.md`](docs/submission.md) for the project summary, data attributions, and evidence limits. The seven-slide public demo and paste-ready NASA project fields are in [`submission/`](submission/). Detailed source and model notes are in [`docs/data-retrieval.md`](docs/data-retrieval.md), [`docs/data-schema.md`](docs/data-schema.md), and [`docs/phase-two-model-architecture.md`](docs/phase-two-model-architecture.md).
 
 ## Project layout
 
