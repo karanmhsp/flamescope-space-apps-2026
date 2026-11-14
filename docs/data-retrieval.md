@@ -34,12 +34,14 @@ The FLEX-007 test sheet identifies CIR test `20CAL13` and reports heptane, nomin
 ## Generated processing artifacts
 
 - `data/curated/source_file_inventory.csv` records the 13 retrieved files, PSI record/file versions, PSI object keys, stable download endpoints, local byte counts, UTC retrieval date, and SHA-256 checksums. The same details are stored in `data/source_manifest.json`.
-- `data/curated/flex_007_droplet_timeseries.csv` contains the four original FLEX-007 columns plus record/run/source-file/source-row provenance. It preserves blanks and original units.
-- `data/curated/flex_007_run_context.json` captures test-sheet conditions and comments as reported, with source references and interpretation limits.
-- `processing/prepare_flex007.mjs` rebuilds the FLEX derivative using Node.js built-ins only.
+- `data/curated/flex_007_droplet_timeseries.csv`, `flex_007_lluv_timeseries.csv`, and `flex_007_colorcam_timeseries.csv` contain the original FLEX-007 streams plus record/run/source-file/source-row provenance. They preserve blanks, source order, and original units. Their sample clocks are kept separate.
+- `data/curated/flex_007_run_context.json` captures test-sheet conditions and comments as reported, with source references and interpretation limits. `flex_007_quality_report.json` records each stream's sample count, time coverage, cadence, and missing values.
+- `data/curated/saffire_rawdata_timeseries.csv`, `saffire_cygnus_timeseries.csv`, and `saffire_sensor_timeseries.csv` preserve the three selected workbook sheets with original columns and source-row provenance. The clean exports contain 2,645, 2,540, and 105 timestamped rows respectively. The RawData time column is named `RelativeSeconds`, but its scale differs from the companion sheets' explicit seconds/milliseconds fields; retain it as an unverified source value until the data guide resolves that ambiguity.
+- `data/curated/saffire_quality_report.json` documents the cleaning decisions, time coverage, sample cadence, missing fields, and two Excel formula-error cells blanked from the RawData derivative. Rows without a usable source time were omitted from the curated exports; no smoothing, resampling, outlier removal, calibration, or clock alignment was applied.
+- `processing/prepare_flex007.mjs` and `processing/prepare_saffire_telemetry.mjs` rebuild these derivatives using Node.js built-ins only.
 - `processing/build_source_inventory.mjs` rebuilds the inventory and verifies local file sizes against PSI's file catalog before recording checksums.
 
-The curated FLEX file is a source-linked descriptive derivative. One run is not enough to train or validate a predictive fire model, and the SAFIRE/FLEX experiments have different geometries and measurements. Keep them as separate evidence tracks until variables and conditions are shown to be comparable.
+These are source-linked descriptive derivatives. One FLEX run and one SAFFIRE-I telemetry workbook are not enough to train or validate a general predictive fire model. The investigations have different geometries, channels, and timing; keep them as separate evidence tracks until variables and conditions are shown to be comparable.
 
 ## Retrieval and interpretation rules
 

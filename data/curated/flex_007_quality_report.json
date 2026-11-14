@@ -1,0 +1,71 @@
+{
+  "investigation_id": "FLEX",
+  "psi_record_id": "PSI-69",
+  "doi": "10.60555/mbq8-0451",
+  "record_version": 5,
+  "run_id": "FLEX-007",
+  "policy": "Source order is preserved; invalid-time rows would be excluded; missing values remain blank; sensor spikes are retained for review.",
+  "streams": [
+    {
+      "source_file": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_DropletData.txt",
+      "output_file": "data/curated/flex_007_droplet_timeseries.csv",
+      "source_row_count": 141,
+      "cleaned_row_count": 141,
+      "dropped_rows_with_missing_or_invalid_time": 0,
+      "source_time_column": "DropletTime_sec",
+      "units": "seconds, as labeled in the source",
+      "time_summary": {
+        "min_s": -1.466667000000598,
+        "max_s": 3.900000000001455,
+        "median_interval_s": 0.03333299999940209,
+        "non_increasing_steps": 0
+      },
+      "error_cells_blank_in_curated_file": 0,
+      "error_cells_by_column": {},
+      "missing_values_by_column": {
+        "ZeroedDropletXpos_mm": 141,
+        "ZeroedDropletYpos_mm": 141
+      }
+    },
+    {
+      "source_file": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_LLUVData.txt",
+      "output_file": "data/curated/flex_007_lluv_timeseries.csv",
+      "source_row_count": 177,
+      "cleaned_row_count": 177,
+      "dropped_rows_with_missing_or_invalid_time": 0,
+      "source_time_column": "LLUVTime_sec",
+      "units": "seconds, as labeled in the source",
+      "time_summary": {
+        "min_s": -0.5500000000029104,
+        "max_s": 5.516667000003508,
+        "median_interval_s": 0.03333299999940209,
+        "non_increasing_steps": 0
+      },
+      "error_cells_blank_in_curated_file": 0,
+      "error_cells_by_column": {},
+      "missing_values_by_column": {
+        "LLUVFlameStandoff": 64
+      }
+    },
+    {
+      "source_file": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_ColorCamData.txt",
+      "output_file": "data/curated/flex_007_colorcam_timeseries.csv",
+      "source_row_count": 158,
+      "cleaned_row_count": 158,
+      "dropped_rows_with_missing_or_invalid_time": 0,
+      "source_time_column": "ColorCamTime_sec",
+      "units": "seconds, as labeled in the source",
+      "time_summary": {
+        "min_s": 0.2333329999964917,
+        "max_s": 5.633332999997947,
+        "median_interval_s": 0.03333299999940209,
+        "non_increasing_steps": 0
+      },
+      "error_cells_blank_in_curated_file": 0,
+      "error_cells_by_column": {},
+      "missing_values_by_column": {
+        "ColorCamFlameStandoff": 50
+      }
+    }
+  ]
+}

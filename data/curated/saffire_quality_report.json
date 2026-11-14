@@ -1,0 +1,96 @@
+{
+  "investigation_id": "SAFFIRE-I",
+  "psi_record_id": "PSI-98",
+  "doi": "10.60555/0t15-1z43",
+  "record_version": 4,
+  "source_file": "data/raw/SAFFIRE-I/PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx",
+  "policy": "Original columns and numeric strings are preserved. Excel error cells are blanked in curated CSVs and recorded in row quality flags. No smoothing, resampling, outlier removal, calibration, or clock alignment is applied.",
+  "sheets": [
+    {
+      "name": "RawData",
+      "worksheet_part": "xl/worksheets/sheet1.xml",
+      "source_dimension": "A1:AV9750",
+      "source_time_column": "RelativeSeconds",
+      "source_timestamp_column": null,
+      "source_rows_with_data": 9749,
+      "cleaned_rows": 2645,
+      "rows_dropped_for_missing_or_invalid_timestamp_or_time": 7104,
+      "error_cells_blank_in_curated_file": 2,
+      "error_cells_by_column": {
+        "Saffire Repeat?": 1,
+        "Row to Row Delta T (ms)": 1
+      },
+      "missing_values_by_column": {
+        "Saffire Repeat?": 1,
+        "Row to Row Delta T (ms)": 1
+      },
+      "time_summary": {
+        "source_time_column": "RelativeSeconds",
+        "units": "unverified; original values preserved",
+        "min_source_value": 9273210,
+        "max_source_value": 15967642,
+        "median_step_source_units": 1248,
+        "duplicate_or_backwards_steps": 0
+      },
+      "output_file": "data/curated/saffire_rawdata_timeseries.csv"
+    },
+    {
+      "name": "CygnusData",
+      "worksheet_part": "xl/worksheets/sheet2.xml",
+      "source_dimension": "A1:W8073",
+      "source_time_column": "Relative Time (s)",
+      "source_timestamp_column": "CygnusTimestamp",
+      "source_rows_with_data": 8072,
+      "cleaned_rows": 2540,
+      "rows_dropped_for_missing_or_invalid_timestamp_or_time": 5532,
+      "error_cells_blank_in_curated_file": 0,
+      "error_cells_by_column": {},
+      "missing_values_by_column": {
+        "source_column_19": 2540,
+        "Cygnus-Saffire Time Stamp (ms)": 2435,
+        "source_column_21": 2540,
+        "source_column_22": 2540,
+        "Saffire timestamp row-to-row delta t (ms)": 2435
+      },
+      "time_summary": {
+        "source_time_column": "Relative Time (s)",
+        "units": "seconds, as labeled in the source",
+        "min_source_value": 9275.094,
+        "max_source_value": 15967.642,
+        "median_step_source_units": 1.2480000000014115,
+        "duplicate_or_backwards_steps": 0
+      },
+      "output_file": "data/curated/saffire_cygnus_timeseries.csv"
+    },
+    {
+      "name": "SaffireData",
+      "worksheet_part": "xl/worksheets/sheet6.xml",
+      "source_dimension": "A1:AG6084",
+      "source_time_column": "Relative Time (s)",
+      "source_timestamp_column": "SaffireTimestamp",
+      "source_rows_with_data": 6083,
+      "cleaned_rows": 105,
+      "rows_dropped_for_missing_or_invalid_timestamp_or_time": 5978,
+      "error_cells_blank_in_curated_file": 0,
+      "error_cells_by_column": {},
+      "missing_values_by_column": {},
+      "time_summary": {
+        "source_time_column": "Relative Time (s)",
+        "units": "seconds, as labeled in the source",
+        "min_source_value": 9273.21,
+        "max_source_value": 15952.109,
+        "median_step_source_units": 29.86499999999978,
+        "duplicate_or_backwards_steps": 0
+      },
+      "output_file": "data/curated/saffire_sensor_timeseries.csv"
+    }
+  ],
+  "interpretation_limits": [
+    "CygnusData and SaffireData retain their separate source clocks and sampling cadences; rows are not joined by index.",
+    "The RawData worksheet is exported in its source row order with its original time field; its Cygnus and SAFFIRE timestamps are preserved as separate columns.",
+    "RawData labels its time field RelativeSeconds, but its values are on a different scale from the companion sheets' explicitly labeled Relative Time (s)/(ms) columns. Units are therefore unverified and are not converted.",
+    "Sensor readings are preserved in source units and channel labels. No voltage-to-obscuration, flow, or heat calibration is assumed.",
+    "Potential fire-related peaks are retained as observations; no outlier filtering is used because a peak may be a real event.",
+    "This workbook is one investigation's telemetry record, not sufficient on its own to train and validate a general fire-risk predictor."
+  ]
+}

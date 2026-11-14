@@ -23,6 +23,69 @@
     "reported_end_state": "Disruption"
   },
   "notes_as_reported": "Free-floating heptane droplet burning in a cabin air (nominally 0.21/0.79 O2/N2), 1.0 atm ambient environment.  The droplet deploys and ignites with little residual velocity and stays within the HiBMS FOV for the entire test.  The droplet burns with a very luminous flame that obscures droplet in HiBMS for a large portion of the test.  The droplet burns to disruption at a small droplet size with the last part of the droplet history obscured by the luminous flame.",
+  "streams": [
+    {
+      "source_file": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_DropletData.txt",
+      "output_file": "data/curated/flex_007_droplet_timeseries.csv",
+      "source_row_count": 141,
+      "cleaned_row_count": 141,
+      "dropped_rows_with_missing_or_invalid_time": 0,
+      "source_time_column": "DropletTime_sec",
+      "units": "seconds, as labeled in the source",
+      "time_summary": {
+        "min_s": -1.466667000000598,
+        "max_s": 3.900000000001455,
+        "median_interval_s": 0.03333299999940209,
+        "non_increasing_steps": 0
+      },
+      "error_cells_blank_in_curated_file": 0,
+      "error_cells_by_column": {},
+      "missing_values_by_column": {
+        "ZeroedDropletXpos_mm": 141,
+        "ZeroedDropletYpos_mm": 141
+      }
+    },
+    {
+      "source_file": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_LLUVData.txt",
+      "output_file": "data/curated/flex_007_lluv_timeseries.csv",
+      "source_row_count": 177,
+      "cleaned_row_count": 177,
+      "dropped_rows_with_missing_or_invalid_time": 0,
+      "source_time_column": "LLUVTime_sec",
+      "units": "seconds, as labeled in the source",
+      "time_summary": {
+        "min_s": -0.5500000000029104,
+        "max_s": 5.516667000003508,
+        "median_interval_s": 0.03333299999940209,
+        "non_increasing_steps": 0
+      },
+      "error_cells_blank_in_curated_file": 0,
+      "error_cells_by_column": {},
+      "missing_values_by_column": {
+        "LLUVFlameStandoff": 64
+      }
+    },
+    {
+      "source_file": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_ColorCamData.txt",
+      "output_file": "data/curated/flex_007_colorcam_timeseries.csv",
+      "source_row_count": 158,
+      "cleaned_row_count": 158,
+      "dropped_rows_with_missing_or_invalid_time": 0,
+      "source_time_column": "ColorCamTime_sec",
+      "units": "seconds, as labeled in the source",
+      "time_summary": {
+        "min_s": 0.2333329999964917,
+        "max_s": 5.633332999997947,
+        "median_interval_s": 0.03333299999940209,
+        "non_increasing_steps": 0
+      },
+      "error_cells_blank_in_curated_file": 0,
+      "error_cells_by_column": {},
+      "missing_values_by_column": {
+        "ColorCamFlameStandoff": 50
+      }
+    }
+  ],
   "sources": [
     {
       "file": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_TestSheet.txt",
@@ -30,7 +93,15 @@
     },
     {
       "file": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_DropletData.txt",
-      "reference": "header row 1; source data rows 2 onward"
+      "reference": "header row; source time-series rows follow"
+    },
+    {
+      "file": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_LLUVData.txt",
+      "reference": "header row; source time-series rows follow"
+    },
+    {
+      "file": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_ColorCamData.txt",
+      "reference": "header row; source time-series rows follow"
     },
     {
       "file": "data/raw/FLEX/PSI-69_Experimental table_FLEX.csv",
@@ -38,8 +109,8 @@
     }
   ],
   "interpretation_limits": [
-    "This derivative copies the source time series and adds provenance only; it does not predict fire outcomes.",
-    "Blank source values remain blank. No values or gravity regime are inferred.",
-    "The TestSheet values are kept separately as reported because the experimental table may use different rounding or processing."
+    "Original measurements and units are retained; blank cells remain blank. No smoothing, resampling, outlier removal, or prediction is applied.",
+    "The three streams have separate sample clocks and coverage windows. They are not joined by row number; synchronized overlays need an explicit alignment tolerance and gap policy.",
+    "No gravity regime or new physical values are inferred. Test-sheet values remain separate from experiment-table values to preserve their reported precision and provenance."
   ]
 }
