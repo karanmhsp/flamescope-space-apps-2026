@@ -17,7 +17,10 @@
       "focus": "Large solid-fabric fire behavior and fire detection measurements in a spacecraft duct",
       "reported_context": {
         "material": "Sibal composite fabric (75% cotton, 25% fiberglass by weight)",
-        "sample_size_m": [0.94, 0.4],
+        "sample_size_m": [
+          0.94,
+          0.4
+        ],
         "duct_airflow_cm_per_s": 20,
         "measurements_reported": [
           "video",
@@ -28,7 +31,70 @@
           "airflow velocity"
         ]
       },
-      "download_status": "not_started"
+      "download_status": "downloaded_first_slice",
+      "retrieval_date_utc": "2026-11-14",
+      "retrieved_files": [
+        {
+          "file_name": "PSI-98_Experimental table_SAFFIRE-1.csv",
+          "relative_path": "data/raw/SAFFIRE-I/PSI-98_Experimental table_SAFFIRE-1.csv",
+          "psi_file_version": 1,
+          "psi_storage_key": "psi-data/PSI-98/Experimental table/PSI-98_Experimental table_SAFFIRE-1.csv",
+          "source_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+          "source_download_endpoint": "https://psi.nasa.gov/geode-py/ws/studies/PSI-98/download?file=PSI-98_Experimental%20table_SAFFIRE-1.csv&version=1&studyVersion=4&redirect=false",
+          "retrieved_date_utc": "2026-11-14",
+          "psi_catalog_bytes": 469,
+          "local_bytes": 469,
+          "sha256": "C01F29C62455F0A3B512290AB85E5687ECDED326733189F002F580368402308D"
+        },
+        {
+          "file_name": "PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx",
+          "relative_path": "data/raw/SAFFIRE-I/PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx",
+          "psi_file_version": 1,
+          "psi_storage_key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_Saffire-I Telemetry Data Good Process Version.xlsx",
+          "source_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+          "source_download_endpoint": "https://psi.nasa.gov/geode-py/ws/studies/PSI-98/download?file=PSI-98_Raw%20Data_Saffire-I%20Telemetry%20Data%20Good%20Process%20Version.xlsx&version=1&studyVersion=4&redirect=false",
+          "retrieved_date_utc": "2026-11-14",
+          "psi_catalog_bytes": 2775737,
+          "local_bytes": 2775737,
+          "sha256": "2E6657842266B80D48BDFEF9E6683FF522696A62F95C4B81222BB583B76F9CCF"
+        },
+        {
+          "file_name": "PSI-98_Science Documents_SAFFIRE-I and SAFFIRE-III Readme.docx",
+          "relative_path": "data/raw/SAFFIRE-I/PSI-98_Science Documents_SAFFIRE-I and SAFFIRE-III Readme.docx",
+          "psi_file_version": 1,
+          "psi_storage_key": "psi-data/PSI-98/Science Documents/PSI-98_Science Documents_SAFFIRE-I and SAFFIRE-III Readme.docx",
+          "source_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+          "source_download_endpoint": "https://psi.nasa.gov/geode-py/ws/studies/PSI-98/download?file=PSI-98_Science%20Documents_SAFFIRE-I%20and%20SAFFIRE-III%20Readme.docx&version=1&studyVersion=4&redirect=false",
+          "retrieved_date_utc": "2026-11-14",
+          "psi_catalog_bytes": 65426,
+          "local_bytes": 65426,
+          "sha256": "49C939337FA00A0473F7EFA10367288F510AFCBF69DD7F5405054A2617D3A66D"
+        },
+        {
+          "file_name": "PSI-98_Engineering Documents_SAFFIRE-I Operations.pdf",
+          "relative_path": "data/raw/SAFFIRE-I/PSI-98_Engineering Documents_SAFFIRE-I Operations.pdf",
+          "psi_file_version": 1,
+          "psi_storage_key": "psi-data/PSI-98/Engineering Documents/PSI-98_Engineering Documents_SAFFIRE-I Operations.pdf",
+          "source_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+          "source_download_endpoint": "https://psi.nasa.gov/geode-py/ws/studies/PSI-98/download?file=PSI-98_Engineering%20Documents_SAFFIRE-I%20Operations.pdf&version=1&studyVersion=4&redirect=false",
+          "retrieved_date_utc": "2026-11-14",
+          "psi_catalog_bytes": 13957,
+          "local_bytes": 13957,
+          "sha256": "01F812143679ACBD31D7013404E3A8B8752AD554CF93B40A96845EBF37FFE882"
+        },
+        {
+          "file_name": "PSI-98_Raw Data_SFSDP-VIS-0295_Saffire 1 and 3_Thermocouple Placement.pdf",
+          "relative_path": "data/raw/SAFFIRE-I/PSI-98_Raw Data_SFSDP-VIS-0295_Saffire 1 and 3_Thermocouple Placement.pdf",
+          "psi_file_version": 1,
+          "psi_storage_key": "psi-data/PSI-98/Raw Data/PSI-98_Raw Data_SFSDP-VIS-0295_Saffire 1 and 3_Thermocouple Placement.pdf",
+          "source_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+          "source_download_endpoint": "https://psi.nasa.gov/geode-py/ws/studies/PSI-98/download?file=PSI-98_Raw%20Data_SFSDP-VIS-0295_Saffire%201%20and%203_Thermocouple%20Placement.pdf&version=1&studyVersion=4&redirect=false",
+          "retrieved_date_utc": "2026-11-14",
+          "psi_catalog_bytes": 1065733,
+          "local_bytes": 1065733,
+          "sha256": "E792C665B700656152ADBF2594B68BC5D73C3FC0F6711608B4330A9D7535653F"
+        }
+      ]
     },
     {
       "investigation_id": "FLEX",
@@ -44,9 +110,16 @@
       "subresearch_area": "Spacecraft Fire Safety",
       "focus": "Droplet combustion, flammability limits, and extinction under microgravity conditions",
       "reported_context": {
-        "pressure_range_atm": [0.5, 1.5],
+        "pressure_range_atm": [
+          0.5,
+          1.5
+        ],
         "initial_droplet_diameter_approx_mm": 3,
-        "suppressants_reported": ["CO2", "He", "SF6"],
+        "suppressants_reported": [
+          "CO2",
+          "He",
+          "SF6"
+        ],
         "measurements_reported": [
           "droplet burning rate",
           "flame extinction behavior",
@@ -55,7 +128,106 @@
           "temperature profile"
         ]
       },
-      "download_status": "not_started"
+      "download_status": "downloaded_first_slice",
+      "retrieval_date_utc": "2026-11-14",
+      "retrieved_files": [
+        {
+          "file_name": "PSI-69_Experimental table_FLEX.csv",
+          "relative_path": "data/raw/FLEX/PSI-69_Experimental table_FLEX.csv",
+          "psi_file_version": 1,
+          "psi_storage_key": "psi-data/PSI-69/Experimental table/PSI-69_Experimental table_FLEX.csv",
+          "source_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+          "source_download_endpoint": "https://psi.nasa.gov/geode-py/ws/studies/PSI-69/download?file=PSI-69_Experimental%20table_FLEX.csv&version=1&studyVersion=5&redirect=false",
+          "retrieved_date_utc": "2026-11-14",
+          "psi_catalog_bytes": 24776,
+          "local_bytes": 24776,
+          "sha256": "37C88CE8AE9391B7544FF630A45CE87543D04D317CDBFBED104FE7D5C27E1B96"
+        },
+        {
+          "file_name": "PSI-69_metadata_PSI-133_FLEX.zip",
+          "relative_path": "data/raw/FLEX/PSI-69_metadata_PSI-133_FLEX.zip",
+          "psi_file_version": 4,
+          "psi_storage_key": "psi-data/PSI-69/metadata/PSI-69_metadata_PSI-133_FLEX.zip",
+          "source_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+          "source_download_endpoint": "https://psi.nasa.gov/geode-py/ws/studies/PSI-69/download?file=PSI-69_metadata_PSI-133_FLEX.zip&version=4&studyVersion=5&redirect=false",
+          "retrieved_date_utc": "2026-11-14",
+          "psi_catalog_bytes": 24780,
+          "local_bytes": 24780,
+          "sha256": "3FF0E8A61BC58E79756B4A860CDF0616889F95F03FE48536B62E600CED2C0337"
+        },
+        {
+          "file_name": "PSI-69_Raw Data_FLEX-007_DropletData.txt",
+          "relative_path": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_DropletData.txt",
+          "psi_file_version": 1,
+          "psi_storage_key": "psi-data/PSI-69/Raw Data/PSI-69_Raw Data_FLEX-007_DropletData.txt",
+          "source_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+          "source_download_endpoint": "https://psi.nasa.gov/geode-py/ws/studies/PSI-69/download?file=PSI-69_Raw%20Data_FLEX-007_DropletData.txt&version=1&studyVersion=5&redirect=false",
+          "retrieved_date_utc": "2026-11-14",
+          "psi_catalog_bytes": 5366,
+          "local_bytes": 5366,
+          "sha256": "B23C77BBCA5896142369D6B6E2C1C964CE527EA0FBAAEBEA6DE69BB3E7B79F6B"
+        },
+        {
+          "file_name": "PSI-69_Raw Data_FLEX-007_ColorCamData.txt",
+          "relative_path": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_ColorCamData.txt",
+          "psi_file_version": 1,
+          "psi_storage_key": "psi-data/PSI-69/Raw Data/PSI-69_Raw Data_FLEX-007_ColorCamData.txt",
+          "source_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+          "source_download_endpoint": "https://psi.nasa.gov/geode-py/ws/studies/PSI-69/download?file=PSI-69_Raw%20Data_FLEX-007_ColorCamData.txt&version=1&studyVersion=5&redirect=false",
+          "retrieved_date_utc": "2026-11-14",
+          "psi_catalog_bytes": 7588,
+          "local_bytes": 7588,
+          "sha256": "8E6134316DA5D2D69585989B4D54B39FDED87EE303A8013FF2A9F017AAC02AAA"
+        },
+        {
+          "file_name": "PSI-69_Raw Data_FLEX-007_LLUVData.txt",
+          "relative_path": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_LLUVData.txt",
+          "psi_file_version": 1,
+          "psi_storage_key": "psi-data/PSI-69/Raw Data/PSI-69_Raw Data_FLEX-007_LLUVData.txt",
+          "source_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+          "source_download_endpoint": "https://psi.nasa.gov/geode-py/ws/studies/PSI-69/download?file=PSI-69_Raw%20Data_FLEX-007_LLUVData.txt&version=1&studyVersion=5&redirect=false",
+          "retrieved_date_utc": "2026-11-14",
+          "psi_catalog_bytes": 14508,
+          "local_bytes": 14508,
+          "sha256": "253448970446906DB3729A2E3BDC298B4936364A6519FCC80749345FF057BFE5"
+        },
+        {
+          "file_name": "PSI-69_Raw Data_FLEX-007_Summary.pdf",
+          "relative_path": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_Summary.pdf",
+          "psi_file_version": 1,
+          "psi_storage_key": "psi-data/PSI-69/Raw Data/PSI-69_Raw Data_FLEX-007_Summary.pdf",
+          "source_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+          "source_download_endpoint": "https://psi.nasa.gov/geode-py/ws/studies/PSI-69/download?file=PSI-69_Raw%20Data_FLEX-007_Summary.pdf&version=1&studyVersion=5&redirect=false",
+          "retrieved_date_utc": "2026-11-14",
+          "psi_catalog_bytes": 147809,
+          "local_bytes": 147809,
+          "sha256": "DA2D053BB5D3CD7079D4463097D97A82E5775682A42ABA33219707E7E3E7E3FD"
+        },
+        {
+          "file_name": "PSI-69_Raw Data_FLEX-007_TestSheet.txt",
+          "relative_path": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_TestSheet.txt",
+          "psi_file_version": 1,
+          "psi_storage_key": "psi-data/PSI-69/Raw Data/PSI-69_Raw Data_FLEX-007_TestSheet.txt",
+          "source_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+          "source_download_endpoint": "https://psi.nasa.gov/geode-py/ws/studies/PSI-69/download?file=PSI-69_Raw%20Data_FLEX-007_TestSheet.txt&version=1&studyVersion=5&redirect=false",
+          "retrieved_date_utc": "2026-11-14",
+          "psi_catalog_bytes": 906,
+          "local_bytes": 906,
+          "sha256": "CB748242C189BCA59B861D0BB0F406FB7A80AEE1710CEE363F7620C43D66E2A0"
+        },
+        {
+          "file_name": "PSI-69_Raw Data_FLEX-007_TestSheet.rtf",
+          "relative_path": "data/raw/FLEX/PSI-69_Raw Data_FLEX-007_TestSheet.rtf",
+          "psi_file_version": 1,
+          "psi_storage_key": "psi-data/PSI-69/Raw Data/PSI-69_Raw Data_FLEX-007_TestSheet.rtf",
+          "source_record_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+          "source_download_endpoint": "https://psi.nasa.gov/geode-py/ws/studies/PSI-69/download?file=PSI-69_Raw%20Data_FLEX-007_TestSheet.rtf&version=1&studyVersion=5&redirect=false",
+          "retrieved_date_utc": "2026-11-14",
+          "psi_catalog_bytes": 587664,
+          "local_bytes": 587664,
+          "sha256": "0958A866EE633D76C552CB3A0C781DEBDFD3211CD2E8D548354C0A3BA4E861DA"
+        }
+      ]
     }
   ]
 }
