@@ -1,6 +1,6 @@
 # NASA PSI data retrieval: SAFFIRE-I and FLEX
 
-“Sapphire and Flits” is interpreted as **SAFFIRE-I** and **FLEX**, the NASA combustion investigations selected for FlameScope.
+FlameScope's selected investigations are **SAFFIRE-I** and **FLEX**, the NASA combustion studies used for its first dashboard slice.
 
 ## Official PSI records
 
@@ -38,6 +38,7 @@ The FLEX-007 test sheet identifies CIR test `20CAL13` and reports heptane, nomin
 - `data/curated/flex_007_run_context.json` captures test-sheet conditions and comments as reported, with source references and interpretation limits. `flex_007_quality_report.json` records each stream's sample count, time coverage, cadence, and missing values.
 - `data/curated/saffire_rawdata_timeseries.csv`, `saffire_cygnus_timeseries.csv`, and `saffire_sensor_timeseries.csv` preserve the three selected workbook sheets with original columns and source-row provenance. The clean exports contain 2,645, 2,540, and 105 timestamped rows respectively. The RawData time column is named `RelativeSeconds`, but its scale differs from the companion sheets' explicit seconds/milliseconds fields; retain it as an unverified source value until the data guide resolves that ambiguity.
 - `data/curated/saffire_quality_report.json` documents the cleaning decisions, time coverage, sample cadence, missing fields, and two Excel formula-error cells blanked from the RawData derivative. Rows without a usable source time were omitted from the curated exports; no smoothing, resampling, outlier removal, calibration, or clock alignment was applied.
+- `data/curated/saffire_cygnus_dashboard.csv` is a dashboard-focused export of the selected Cygnus detector, temperature, pressure, and fan channels. It retains the source row and timestamps while excluding unrelated workbook columns; the complete curated Cygnus export remains available separately.
 - `processing/prepare_flex007.mjs` and `processing/prepare_saffire_telemetry.mjs` rebuild these derivatives using Node.js built-ins only.
 - `processing/build_source_inventory.mjs` rebuilds the inventory and verifies local file sizes against PSI's file catalog before recording checksums.
 

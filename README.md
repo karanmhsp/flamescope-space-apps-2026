@@ -2,16 +2,16 @@
 
 An evidence-first dashboard for exploring NASA microgravity combustion studies and fire-safety questions in human spaceflight.
 
-## Current phase
+## Project status
 
-Phase three delivers a working dashboard for two separate PSI investigations:
+FlameScope is a working, evidence-first dashboard prototype for NASA's **Flame in Freefall** challenge. It makes two PSI investigations explorable while keeping their measurement streams separate:
 
 - SAFFIRE-I (PSI-98, record version 4): Cygnus cabin/detector telemetry and a separate SAFFIRE sensor stream, with source timestamps, quality notes, and channel selectors.
 - FLEX (PSI-69, record version 5): FLEX-007 droplet, LLUV, and color-camera measurements, with run conditions and source-reported end state.
 - Each view plots preserved time series, source-linked sample counts, observed ranges, and candidate departures from a rolling median/MAD screen. The screen is exploratory; it is not a trained classifier or operational fire alarm.
 - Independent clocks, units, missingness, source rows, and run context remain visible. Cross-stream timing is not reconciled and the investigations are never merged.
 
-See [`docs/data-retrieval.md`](docs/data-retrieval.md), [`docs/data-schema.md`](docs/data-schema.md), and [`docs/phase-two-model-architecture.md`](docs/phase-two-model-architecture.md) for retrieval, processing, and model limits.
+The current screen is a rolling median/MAD research heuristic, not a trained AI model, predictive fire warning, or certified safety system. See [`docs/submission.md`](docs/submission.md) for the copy-ready project summary, data attributions, evidence limits, and remaining submission steps. Detailed source and model notes are in [`docs/data-retrieval.md`](docs/data-retrieval.md), [`docs/data-schema.md`](docs/data-schema.md), and [`docs/phase-two-model-architecture.md`](docs/phase-two-model-architecture.md).
 
 ## Project layout
 
@@ -36,15 +36,17 @@ node processing/prepare_saffire_telemetry.mjs
 node processing/prepare_flex007.mjs
 ```
 
-The raw PSI files must exist in their documented `data/raw/` locations. Processing scripts use Node.js built-ins and do not modify the raw originals.
+The raw PSI files must exist in their documented `data/raw/` locations. Processing scripts use Node.js built-ins and do not modify the raw originals. The dashboard itself uses the committed curated exports, so raw source files are not needed just to run the UI.
 
 ## Start the dashboard
 
 ```powershell
 cd frontend
-pnpm install
+pnpm install --frozen-lockfile
 pnpm dev
 ```
+
+Open the local URL printed by Vite. To create a production build, run `pnpm build` from `frontend/`.
 
 ## Data handling rules
 
@@ -60,3 +62,7 @@ pnpm dev
 - Data preparation: Node.js built-ins
 - Future model service: Python API and scientific stack, after more runs and source labels are collected
 - GitHub repository: `https://github.com/karanmhsp/flamescope-space-apps-2026`
+
+## Attribution and license
+
+Original FlameScope source code is licensed under the MIT License in [`LICENSE`](LICENSE). NASA PSI source data and derived files are attributed in [`docs/submission.md`](docs/submission.md) and the source manifest. The source records identify the selected PSI datasets as CC0-1.0; third-party packages and fonts retain their own license terms. FlameScope is an independent participant project; NASA does not endorse it.

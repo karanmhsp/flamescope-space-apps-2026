@@ -1,6 +1,18 @@
-# Initial data schema
+# Data schema and provenance
 
-The first version keeps original values and separates experiment context from observations. Fields may remain unknown until the source file establishes them.
+The dashboard keeps measured values and experiment context separate. Source labels, units, clocks, and missingness are preserved; fields stay unknown until the source file establishes them.
+
+## Curated files currently used by the dashboard
+
+| Investigation / stream | Curated file | Rows with usable source time | Time column | Example measurement fields |
+|---|---|---:|---|---|
+| SAFFIRE-I / Cygnus | `saffire_cygnus_dashboard.csv` | 2,540 | `Relative Time (s)` | Smoke-detector and scatterometer V, air temperature °C, pressure psi, fan differential pressure Pa |
+| SAFFIRE-I / SaffireData | `saffire_sensor_timeseries.csv` | 105 | `Relative Time (s)` | `Radiometer1Value`–`Radiometer4Value`, `Anemometer1`, `FanTachometer`, smoke-wire channels |
+| FLEX-007 / droplet | `flex_007_droplet_timeseries.csv` | 141 | `DropletTime_sec` | `DropletDiameter_mm` and zeroed positions |
+| FLEX-007 / LLUV | `flex_007_lluv_timeseries.csv` | 177 | `LLUVTime_sec` | `LLUVFlameDiameter_mm`, `LLUVFlameStandoff` |
+| FLEX-007 / color camera | `flex_007_colorcam_timeseries.csv` | 158 | `ColorCamTime_sec` | `ColorCamFlameDiameter_mm`, `ColorCamFlameStandoff` |
+
+Every dashboard stream carries source record identity, DOI, record/file version where available, source file, source row, and quality flags. The broader `saffire_cygnus_timeseries.csv` and `saffire_rawdata_timeseries.csv` remain available for research but are not the dashboard's Cygnus view. The RawData time-unit ambiguity is documented in [`data-retrieval.md`](data-retrieval.md).
 
 ## Source file inventory
 
